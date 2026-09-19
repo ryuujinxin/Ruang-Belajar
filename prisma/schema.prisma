@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  STUDENT
+  TEACHER_PENDING
+  TEACHER
+  ADMIN
+}
+
+enum TeacherApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  TEXT
+}
+
+enum QuestionStatus {
+  DRAFT
+  PUBLISHED
+}
+
+model User {
+  id            String   @id @default(cuid())
+  name          String?
+  email         String?  @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+
+  role UserRole @default(STUDENT)
+
+  accounts Account[]
+  sessions Session[]
+
+  teacherApplication TeacherApplication?
+  questions          Question[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken  String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+model TeacherApplication {
+  id String @id @default(cuid())
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  fullName      String
+  school        String
+  subject       String
+  experience    String?
+  reason        String? @db.Text
+  documentUrl   String?
+
+  status TeacherApplicationStatus @default(PENDING)
+
+  reviewedAt DateTime?
+  reviewedBy String?
+  adminNote  String? @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@map("teacher_applications")
+}
+
+model Question {
+  id String @id @default(cuid())
+
+  teacherId String
+  teacher   User   @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+
+  subject String
+  questionText String @db.Text
+
+  type QuestionType
+
+  optionA String? @db.Text
+  optionB String? @db.Text
+  optionC String? @db.Text
+  optionD String? @db.Text
+
+  answer String @db.Text
+  explanation String? @db.Text
+
+  status QuestionStatus @default(DRAFT)
+
+  publishedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([teacherId])
+  @@index([subject])
+  @@index([status])
+  @@index([status, subject])
+  @@map("questions")
+}

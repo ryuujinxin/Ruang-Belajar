@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+/* =========================================================
+   RUANG BELAJAR — GLOBAL THEME
+   ========================================================= */
+
+:root {
+  --background: #08080b;
+  --foreground: #f5f5f7;
+
+  --surface: #111116;
+  --surface-2: #17171d;
+  --surface-3: #1d1d24;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.13);
+
+  --muted: #8e8e99;
+  --muted-strong: #b7b7c2;
+
+  --header-bg: rgba(8, 8, 11, 0.78);
+
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+
+  --danger: #ff453a;
+
+  color-scheme: dark;
+}
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+html.light {
+  --background: #f5f5f7;
+  --foreground: #111114;
+
+  --surface: #ffffff;
+  --surface-2: #f0f0f3;
+  --surface-3: #e7e7ec;
+
+  --border: rgba(0, 0, 0, 0.07);
+  --border-strong: rgba(0, 0, 0, 0.12);
+
+  --muted: #6e6e78;
+  --muted-strong: #48484f;
+
+  --header-bg: rgba(245, 245, 247, 0.78);
+
+  --accent: #7c3aed;
+  --accent-strong: #6d28d9;
+
+  --danger: #ff3b30;
+
+  color-scheme: light;
+}
+
+/* =========================================================
+   SYSTEM THEME
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="system"] {
+    --background: #f5f5f7;
+    --foreground: #111114;
+
+    --surface: #ffffff;
+    --surface-2: #f0f0f3;
+    --surface-3: #e7e7ec;
+
+    --border: rgba(0, 0, 0, 0.07);
+    --border-strong: rgba(0, 0, 0, 0.12);
+
+    --muted: #6e6e78;
+    --muted-strong: #48484f;
+
+    --header-bg: rgba(245, 245, 247, 0.78);
+
+    --accent: #7c3aed;
+    --accent-strong: #6d28d9;
+
+    --danger: #ff3b30;
+
+    color-scheme: light;
+  }
+}
+
+/* =========================================================
+   TAILWIND THEME TOKENS
+   ========================================================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+
+  --color-danger: var(--danger);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html {
+  background: var(--background);
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+/* =========================================================
+   GLOBAL TRANSITIONS
+   ========================================================= */
+
+* {
+  border-color: var(--border);
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.28);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.42);
+}
+
+/* =========================================================
+   THEME UTILITY CLASSES
+   ========================================================= */
+
+.theme-bg {
+  background: var(--background);
+}
+
+.theme-surface {
+  background: var(--surface);
+}
+
+.theme-surface-2 {
+  background: var(--surface-2);
+}
+
+.theme-surface-3 {
+  background: var(--surface-3);
+}
+
+.theme-text {
+  color: var(--foreground);
+}
+
+.theme-muted {
+  color: var(--muted);
+}
+
+.theme-muted-strong {
+  color: var(--muted-strong);
+}
+
+.theme-border {
+  border-color: var(--border);
+}
+
+.theme-border-strong {
+  border-color: var(--border-strong);
+}
+
+.theme-header {
+  background: var(--header-bg);
+}
