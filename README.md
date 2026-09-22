@@ -1,67 +1,88 @@
-# 🎓 Ruang Belajar
+# 🎓 Ruang Belajar - Modern E-Learning Platform
 
-> **Platform belajar modern untuk belajar, berlatih, dan berkembang.**
+<div align="center">
 
-Ruang Belajar adalah aplikasi pembelajaran berbasis web yang dirancang untuk memberikan pengalaman belajar yang **sederhana, modern, dan nyaman**.
+<!-- Tech Badges -->
+<img src="https://img.shields.io/badge/Next.js_16-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+<img src="https://img.shields.io/badge/Prisma_7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS">
 
-Aplikasi ini menyediakan autentikasi pengguna, dashboard pembelajaran, latihan soal, profil pengguna, onboarding, serta pengaturan akun yang terintegrasi dalam satu platform.
+<p>A modern, full-stack web-based learning platform designed to provide a simple, clean, and comfortable experience for studying, practicing, and growing.</p>
+
+<!-- Social Media & Contact Links -->
+<p>
+  <a href="https://instagram.com/username_kamu" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://tiktok.com/@username_kamu" target="_blank"><img src="https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white" alt="TikTok"></a>
+  <a href="https://youtube.com/@username_kamu" target="_blank"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
+  <a href="https://github.com/ryuujinxin" target="_blank"><img src="https://img.shields.io/badge/GitHub-%2312100e.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="mailto:emailkamu@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+</p>
+
+</div>
 
 ---
 
 ## ✨ Features
 
 ### 🔐 Authentication
+- Sign in & Sign up
+- Session-based authentication via NextAuth
+- Protected dashboard & role-based layout
+- Account security & profile management
 
-* Sign in & Sign up
-* Session-based authentication
-* Protected dashboard
-* User roles
-* Account security
-* Profile management
+### 📚 Learning & Practice
+- Comprehensive learning dashboard
+- Structured study materials & resources
+- Dynamic practice/latihan soal sessions
+- Progress-oriented learning experience
 
-### 📚 Learning
-
-* Learning dashboard
-* Materi pembelajaran
-* Practice / latihan soal
-* Dynamic practice sessions
-* Question management
-* Progress-oriented learning experience
-
-### 👤 Profile & Account
-
-* User profile
-* Edit profile
-* Account settings
-* Language preferences
-* Appearance settings
-* Privacy settings
-* Security settings
+### 👤 Profile & Settings
+- Customizable user profile
+- Language & appearance preferences
+- Security and privacy configurations
 
 ### 🎨 User Experience
-
-* Responsive design
-* Modern interface
-* Dark / light theme support
-* Reusable UI components
-* Mobile-friendly layout
-* Smooth and consistent navigation
+- Fully responsive design (Mobile, Tablet, Desktop)
+- Clean, modern, and accessible interface
+- Dark / Light theme support
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ 25+ Tools, Apps & Technologies Used
 
-| Technology       | Usage                      |
-| ---------------- | -------------------------- |
-| **Next.js 16**   | Full-stack React framework |
-| **React**        | UI development             |
-| **TypeScript**   | Type-safe development      |
-| **Prisma 7**     | Database ORM               |
-| **PostgreSQL**   | Database                   |
-| **NextAuth**     | Authentication             |
-| **Tailwind CSS** | Styling                    |
-| **Turbopack**    | Development bundler        |
-| **ESLint**       | Code quality               |
+The project is built using a robust, modern development ecosystem:
+
+| No | Tool / App / Tech | Kategori | Fungsi di Proyek |
+|----|---|---|---|
+| 1 | **Next.js 16** | Framework | Full-stack React framework dengan App Router |
+| 2 | **React** | Library UI | Pengembangan komponen antarmuka interaktif |
+| 3 | **TypeScript** | Bahasa Pemrograman | Type-safe development untuk meminimalisir bug |
+| 4 | **Prisma 7** | ORM Database | Toolkit database modern untuk migrasi & query |
+| 5 | **PostgreSQL** | Database Server | Penyimpanan data relasional utama aplikasi |
+| 6 | **NextAuth** | Autentikasi | Sistem manajemen sesi dan keamanan login |
+| 7 | **Tailwind CSS** | Framework CSS | Utility-first styling untuk desain modern |
+| 8 | **Turbopack** | Bundler | Peningkatan kecepatan pengembangan lokal |
+| 9 | **Node.js** | Runtime Environment | Menjalankan server aplikasi di balik layar |
+| 10 | **NPM** | Package Manager | Pengelola paket dependensi proyek |
+| 11 | **Git** | Version Control | Sistem pelacakan riwayat kode sumber |
+| 12 | **GitHub** | Cloud Platform | Penyimpanan repositori dan kolaborasi online |
+| 13 | **Visual Studio Code** | Text Editor | Lingkungan utama penulisan kode (IDE) |
+| 14 | **Windows Terminal** | Command Line | Antarmuka terminal utama sistem operasi |
+| 15 | **PowerShell** | Shell Scripting | Eksekusi perintah CLI dan manajemen script |
+| 16 | **Google Chrome / DevTools** | Browser & Debugger | Pengujian tampilan web dan debugging |
+| 17 | **ESLint** | Code Quality | Pengecek error dan standar penulisan sintaks |
+| 18 | **Prettier** | Formatter | Penyelaras format penulisan kode otomatis |
+| 19 | **Postman / Thunder Client** | API Testing | Pengujian endpoint server dan rute API |
+| 20 | **Markdown** | Dokumentasi | Format penulisan file README.md yang rapi |
+| 21 | **Google Fonts** | Tipografi | Penyedia font modern berstandar estetika tinggi |
+| 22 | **Shields.io** | Dokumentasi | Pembuat lencana/badge status dinamis |
+| 23 | **Vercel / Netlify** | Deployment | Platform hosting cloud untuk produksi aplikasi |
+| 24 | **Microsoft OneDrive** | Cloud Storage | Tempat sinkronisasi direktori dokumen lokal |
+| 25 | **Discord** | Komunikasi | Diskusi pengembangan proyek bersama komunitas |
+| 26 | **OBS Studio** | Kreatif / Media | Perekaman demo aplikasi atau dokumentasi video |
 
 ---
 
@@ -72,9 +93,7 @@ edu-app/
 ├── prisma/
 │   ├── migrations/
 │   └── schema.prisma
-│
 ├── public/
-│
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -84,297 +103,16 @@ edu-app/
 │   │   ├── onboarding/
 │   │   ├── practice/
 │   │   └── profile/
-│   │
 │   ├── components/
 │   │   └── ui/
-│   │
 │   ├── features/
 │   │   └── auth/
-│   │
 │   ├── data/
-│   │
 │   ├── lib/
 │   │   ├── auth/
 │   │   └── prisma.ts
-│   │
 │   └── types/
-│
 ├── prisma7.config.ts
 ├── next.config.ts
 ├── package.json
 └── README.md
-```
-
----
-
-## 🚀 Getting Started
-
-### Requirements
-
-Sebelum menjalankan project, pastikan sudah terinstall:
-
-* Node.js 20+
-* npm
-* PostgreSQL
-* Git
-
----
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/ryuujinxin/Ruang-Belajar.git
-cd Ruang-Belajar
-```
-
----
-
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-### 3. Configure Environment Variables
-
-Buat file:
-
-```text
-.env
-```
-
-Kemudian isi konfigurasi yang diperlukan:
-
-```env
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
-
-AUTH_SECRET="your-secret-key"
-```
-
-> Jangan commit file `.env` ke repository.
-
----
-
-### 4. Generate Prisma Client
-
-```bash
-npx prisma generate
-```
-
----
-
-### 5. Setup Database
-
-Jalankan migration:
-
-```bash
-npx prisma migrate dev
-```
-
-Jika database sudah memiliki migration yang siap digunakan:
-
-```bash
-npx prisma migrate deploy
-```
-
----
-
-### 6. Run Development Server
-
-```bash
-npm run dev
-```
-
-Buka:
-
-```text
-http://localhost:3000
-```
-
----
-
-## 🧩 Development
-
-Untuk memeriksa kualitas kode:
-
-```bash
-npm run lint
-```
-
-Untuk membuat production build:
-
-```bash
-npm run build
-```
-
-Untuk menjalankan production server:
-
-```bash
-npm start
-```
-
----
-
-## 🗄 Database
-
-Ruang Belajar menggunakan **PostgreSQL** sebagai database dan **Prisma ORM** sebagai database toolkit.
-
-Schema database berada di:
-
-```text
-prisma/schema.prisma
-```
-
-Migration berada di:
-
-```text
-prisma/migrations/
-```
-
-Setelah melakukan perubahan pada schema:
-
-```bash
-npx prisma migrate dev --name your-migration-name
-```
-
-Kemudian generate ulang Prisma Client:
-
-```bash
-npx prisma generate
-```
-
----
-
-## 🔑 Authentication
-
-Authentication digunakan untuk mengelola:
-
-* User registration
-* User login
-* Sessions
-* Protected routes
-* User roles
-* Account security
-
-Authentication configuration berada di:
-
-```text
-src/auth.ts
-```
-
-API authentication:
-
-```text
-src/app/api/auth/[...nextauth]/
-```
-
----
-
-## 🎨 Design Philosophy
-
-Ruang Belajar dibuat dengan beberapa prinsip:
-
-### Simple
-
-Antarmuka dibuat sederhana agar pengguna dapat langsung fokus pada proses belajar.
-
-### Modern
-
-Menggunakan visual hierarchy, spacing, typography, dan komponen yang konsisten.
-
-### Responsive
-
-Pengalaman pengguna dirancang agar tetap nyaman digunakan pada:
-
-* Desktop
-* Tablet
-* Mobile
-
-### Accessible
-
-Komponen dan navigasi dirancang agar mudah dipahami dan digunakan.
-
----
-
-## 🗺 Roadmap
-
-### Completed
-
-* [x] Authentication
-* [x] User registration
-* [x] User login
-* [x] Dashboard
-* [x] Profile
-* [x] Account settings
-* [x] Practice system
-* [x] Prisma integration
-* [x] PostgreSQL integration
-* [x] Theme settings
-* [x] Language settings
-
-### In Progress
-
-* [ ] Learning materials
-* [ ] Learning progress
-* [ ] Improved practice experience
-* [ ] Teacher system
-* [ ] Admin dashboard
-
-### Planned
-
-* [ ] Course system
-* [ ] Achievement system
-* [ ] Learning statistics
-* [ ] Notifications
-* [ ] Teacher marketplace
-* [ ] Advanced analytics
-* [ ] Mobile application
-
----
-
-## 🤝 Contributing
-
-Contributions, ideas, and improvements are welcome.
-
-Untuk melakukan perubahan:
-
-```bash
-git checkout -b feature/your-feature
-```
-
-Kemudian commit:
-
-```bash
-git add .
-git commit -m "feat: add your feature"
-```
-
-Push branch:
-
-```bash
-git push origin feature/your-feature
-```
-
----
-
-## 📄 License
-
-This project is currently intended for development and educational purposes.
-
----
-
-## 👨‍💻 Author
-
-**Ryuu**
-
-GitHub:
-
-https://github.com/ryuujinxin
-
----
-
-<p align="center">
-  Built with ❤️ using Next.js, TypeScript, Prisma, and PostgreSQL.
-</p>
